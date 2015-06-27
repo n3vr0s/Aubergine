@@ -1,0 +1,2 @@
+# Aubergine
+MVP Android library
