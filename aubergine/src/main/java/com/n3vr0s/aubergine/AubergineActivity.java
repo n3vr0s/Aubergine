@@ -1,4 +1,4 @@
-package com.n3vr0s.aubergine.library;
+package com.n3vr0s.aubergine;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -42,13 +42,13 @@ public abstract class AubergineActivity<V extends AubergineView> extends AppComp
     }
 
     @Override protected void onPause() {
-        super.onPause();
         presenterDelegate.onPause();
+        super.onPause();
     }
 
     @Override protected void onDestroy() {
-        super.onDestroy();
         presenterDelegate.onDestroy();
+        super.onDestroy();
     }
 
     @Override public AuberginePresenter getPresenter() {

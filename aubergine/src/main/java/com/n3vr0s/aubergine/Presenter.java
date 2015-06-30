@@ -1,4 +1,4 @@
-package com.n3vr0s.aubergine.library;
+package com.n3vr0s.aubergine;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

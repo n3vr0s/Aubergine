@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 3
-        <activity android:name=".app.screens.screen2.Screen2Activity_" />
+        <activity android:name=".app.screens.screen2.Screen2Activity" />
     </application>
 
 </manifest>

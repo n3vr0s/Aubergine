@@ -1,22 +1,38 @@
 package com.n3vr0s.aubergine.app.base;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
+import com.n3vr0s.aubergine.R;
 
 import de.greenrobot.event.EventBus;
+import icepick.Icepick;
+import icepick.Icicle;
 
-@EActivity
 public abstract class ToolbarAppcompatActivity extends AppCompatActivity {
 
-    @ViewById
     protected Toolbar toolbar;
 
-    @AfterViews
-    protected void afterViews(){
+    @Icicle
+    protected String currentFragmentTag;
+
+    @Override protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Icepick.restoreInstanceState(this, savedInstanceState);
+        createView(savedInstanceState);
+        configureToolbar();
+    }
+
+    /**
+     * View has to implement AubergineView interface
+     * @return
+     */
+    protected abstract void createView(Bundle savedInstanceState);
+
+    protected void configureToolbar() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         getDelegate().setSupportActionBar(toolbar);
     }
 
@@ -35,4 +51,10 @@ public abstract class ToolbarAppcompatActivity extends AppCompatActivity {
             EventBus.getDefault().unregister(this);
         }
     }
+
+    @Override public void onSaveInstanceState(@Nullable Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Icepick.saveInstanceState(this, outState);
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.n3vr0s.aubergine.library;
+package com.n3vr0s.aubergine;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,12 +15,18 @@ public class PresenterFragmentDelegate<P extends AuberginePresenter> {
 
     public void onSaveInstanceState(Bundle outState) {
         isFragmentGoingToBeDestroyed = true;
-        presenter.onSaveInstanceState(outState);
+        if(presenter != null){
+            presenter.onSaveInstanceState(outState);
+        }
     }
 
     protected void onResume() {
         presenter.onResume();
         isFragmentGoingToBeDestroyed = false;
+    }
+
+    protected void onPause(){
+        presenter.onPause();
     }
 
     public void onViewCreated(View view) {

@@ -1,4 +1,4 @@
-package com.n3vr0s.aubergine.library;
+package com.n3vr0s.aubergine;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -17,10 +17,7 @@ public abstract class AubergineFragment<V extends AubergineView> extends Fragmen
 
     private PresenterFragmentDelegate<AuberginePresenter> presenterDelegate = new PresenterFragmentDelegate<>();
     protected WeakReference<? extends Activity> activityWeakRef;
-
-    @Override public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    protected WeakReference<V> viewWeakRef;
 
     @Nullable
     @Override
@@ -28,6 +25,7 @@ public abstract class AubergineFragment<V extends AubergineView> extends Fragmen
         View view = createView();
         try{
             V aubergineView = (V) view;
+            viewWeakRef = new WeakReference<>(aubergineView);
             presenterDelegate.onCreate(aubergineView.getPresenter(), savedInstanceState);
             presenterDelegate.onViewCreated(view);
         }catch (ClassCastException e){
@@ -62,14 +60,19 @@ public abstract class AubergineFragment<V extends AubergineView> extends Fragmen
         presenterDelegate.onResume();
     }
 
+    @Override public void onPause(){
+        presenterDelegate.onPause();
+        super.onPause();
+    }
+
     @Override public void onDestroy() {
-        super.onDestroy();
         presenterDelegate.onDestroy();
+        super.onDestroy();
     }
 
     @Override public void onDestroyView() {
-        super.onDestroyView();
         presenterDelegate.onDestroyView();
+        super.onDestroyView();
     }
 
     @Override public AuberginePresenter getPresenter() {
