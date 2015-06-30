@@ -1,6 +1,6 @@
 package com.n3vr0s.aubergine.app.screens.screen2.sub2;
 
-import com.n3vr0s.aubergine.library.AubergineView;
+import com.n3vr0s.aubergine.AubergineView;
 
 import java.util.List;
 

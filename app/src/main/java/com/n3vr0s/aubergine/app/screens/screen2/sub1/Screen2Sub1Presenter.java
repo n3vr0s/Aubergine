@@ -1,7 +1,7 @@
 package com.n3vr0s.aubergine.app.screens.screen2.sub1;
 
 import com.n3vr0s.aubergine.app.events.NavigateToScreen2Sub2Event;
-import com.n3vr0s.aubergine.library.AuberginePresenter;
+import com.n3vr0s.aubergine.AuberginePresenter;
 
 import org.androidannotations.annotations.EBean;
 

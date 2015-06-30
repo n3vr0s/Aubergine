@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import com.n3vr0s.aubergine.R;
+import com.n3vr0s.aubergine.app.R;
 
 import de.greenrobot.event.EventBus;
 import icepick.Icepick;

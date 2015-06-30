@@ -2,7 +2,7 @@ package com.n3vr0s.aubergine.app.screens.screen2.sub2;
 
 import android.view.View;
 
-import com.n3vr0s.aubergine.library.AubergineFragment;
+import com.n3vr0s.aubergine.AubergineFragment;
 
 import org.androidannotations.annotations.EFragment;
 

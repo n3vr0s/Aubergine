@@ -1,6 +1,6 @@
 package com.n3vr0s.aubergine.app.screens.screen1;
 
-import com.n3vr0s.aubergine.library.AubergineView;
+import com.n3vr0s.aubergine.AubergineView;
 
 public interface Screen1View extends AubergineView {
     void show(CharSequence stuff);

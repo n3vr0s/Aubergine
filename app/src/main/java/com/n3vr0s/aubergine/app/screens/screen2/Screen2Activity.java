@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
-import com.n3vr0s.aubergine.R;
+import com.n3vr0s.aubergine.app.R;
 import com.n3vr0s.aubergine.app.base.ToolbarAppcompatActivity;
 import com.n3vr0s.aubergine.app.events.NavigateToScreen2Sub2Event;
 import com.n3vr0s.aubergine.app.screens.screen2.sub1.Screen2Sub1Fragment_;

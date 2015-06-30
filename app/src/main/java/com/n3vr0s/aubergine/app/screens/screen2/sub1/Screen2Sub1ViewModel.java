@@ -1,6 +1,6 @@
 package com.n3vr0s.aubergine.app.screens.screen2.sub1;
 
-import com.n3vr0s.aubergine.library.AubergineViewModel;
+import com.n3vr0s.aubergine.AubergineViewModel;
 
 import icepick.Icicle;
 

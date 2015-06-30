@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.n3vr0s.aubergine.app.communications.pojos.BeerPojo;
-import com.n3vr0s.aubergine.library.AubergineViewModel;
+import com.n3vr0s.aubergine.AubergineViewModel;
 
 import java.util.ArrayList;
 

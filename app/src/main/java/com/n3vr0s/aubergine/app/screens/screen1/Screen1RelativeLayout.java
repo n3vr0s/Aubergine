@@ -6,9 +6,9 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.n3vr0s.aubergine.R;
+import com.n3vr0s.aubergine.app.R;
 import com.n3vr0s.aubergine.app.Navigator;
-import com.n3vr0s.aubergine.library.AuberginePresenter;
+import com.n3vr0s.aubergine.AuberginePresenter;
 
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;

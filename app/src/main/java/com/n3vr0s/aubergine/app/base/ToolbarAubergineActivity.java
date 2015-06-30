@@ -2,7 +2,7 @@ package com.n3vr0s.aubergine.app.base;
 
 import android.support.v7.widget.Toolbar;
 
-import com.n3vr0s.aubergine.library.AubergineActivity;
+import com.n3vr0s.aubergine.AubergineActivity;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;

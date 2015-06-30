@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.n3vr0s.aubergine.R;
+import com.n3vr0s.aubergine.app.R;
 import com.n3vr0s.aubergine.app.screens.screen2.sub2.Screen2Sub2ViewModel;
 import com.squareup.picasso.Picasso;
 
